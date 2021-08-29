@@ -1,7 +1,7 @@
 <template>
   <div class="container mt-3">
     <Progress :val="progress" />
-    <Intro v-if="!gameStarted" @start="start()"></Intro>
+    <Intro v-if="!gameStarted" @start="start()" />
     <Card v-if="gameContinues" :numbers="numbers" @dream="dream($event)" />
     <Finish :result="result" v-if="gameFinished" @restart="restart()" />
   </div>
